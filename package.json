@@ -1,0 +1,57 @@
+{
+  "name": "@winkgroup/react-upload",
+  "version": "1.0.0",
+  "description": "React component to upload a file",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "format": "prettier --write 'src/**/*.ts'",
+    "prepare": "npm run build",
+    "postversion": "git push && git push --tags && npm publish --access public",
+    "storybook": "export NODE_OPTIONS=--openssl-legacy-provider; start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WINKgroup/react-upload.git"
+  },
+  "keywords": [
+    "react",
+    "upload",
+    "aws",
+    "s3"
+  ],
+  "author": "winksrl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WINKgroup/react-upload/issues"
+  },
+  "homepage": "https://github.com/WINKgroup/react-upload#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack4": "^6.5.15",
+    "@storybook/manager-webpack4": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.27",
+    "babel-loader": "^8.3.0",
+    "prettier": "^2.8.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.9.4"
+  }
+}
